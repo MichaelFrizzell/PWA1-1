@@ -9,7 +9,7 @@
   /* use the alert function to advance rounds and display remaining health and round number*/
   function fight(){
     alert(playerOneName + ":" + playerOneHealth + "  VS  " + playerTwoName + ":" + playerTwoHealth);
-    for (var i = 0; i < 15; i++)
+    for (var i = 0; i < 10; i++)
     { 
       /* instantiate damage */
       var minDmg1 = playerOneDamage * .5,
