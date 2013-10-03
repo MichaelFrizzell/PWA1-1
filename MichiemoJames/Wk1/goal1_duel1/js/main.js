@@ -4,7 +4,7 @@
 (function(){
 
   /* name players */
-  var playerOneName = "Ibuki", playerTwoName = "Blanka", playerOneHealth = 100, playerTwoHealth = 100, playerOneDamage = 50, playerTwoDamage = 50, round = 0;
+  var playerOneName = "Ibuki", playerTwoName = "Blanka", playerOneHealth = 300, playerTwoHealth = 300, playerOneDamage = 50, playerTwoDamage = 50, round = 0;
 
   /* use the alert function to advance rounds and display remaining health and round number*/
   function fight(){
@@ -22,7 +22,7 @@
       playerTwoHealth-=hit2;
 
       /* check for KO */
-      var result = checkKO();
+      var result = winnerCheck();
       if (result === "noKO")
       {
         round++;
@@ -35,7 +35,7 @@
     };
   };
 
-  function checkKO(){
+  function winnerCheck(){
     var result = "noKO";
     if (playerOneHealth < 1 && playerTwoHealth < 1)
     {
