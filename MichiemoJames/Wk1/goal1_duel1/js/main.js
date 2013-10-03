@@ -1,4 +1,4 @@
 // James Michiemo, 02OCT2013, The Duel-Part I
 
-alert("Hello World!");
-console.log("Hello World!");
+
+var playerOneName = "Ibuki", playerTwoName = "Blanka", playerOneHealth = 100, playerTwoHealth = 100, playerOneDamage = 50, playerTwoDamage = 50;
