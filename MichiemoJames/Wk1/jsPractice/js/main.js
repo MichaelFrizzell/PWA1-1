@@ -97,9 +97,21 @@
     /*--------------------------------------------------------*/
     console.log("5. how many vowels in a word");
 
-    /*PUT FUNCTION HERE*/
+    var vowelsInWord = function(word){
+      var vowelCount = 0;
+      var vowels = /a|e|i|o|u/gi;
+      var letterArray = word.split('');
 
-    console.log(vowelsInWord('JavaScript'));
+      for(i=0;i < letterArray.length; i++){
+        if(letterArray[i].match(vowels))
+          vowelCount++;
+      }
+
+      return vowelCount;
+    }
+
+
+    console.log(vowelsInWord('JAvaScript'));
 
     /*--------------------------------------------------------*/
     console.log("6. find number and create an array of even or odd numbers");
