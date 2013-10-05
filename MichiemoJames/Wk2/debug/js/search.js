@@ -10,10 +10,10 @@
 	var validate = function(query){
 		
 		/* Trim whitespace from start and end of search query*/
-		while(query.charAt(0) = " "){
+		while(query.charAt(0) === " "){
 			query = query.substring(1, query.length);
 		};
-		while(query.charAt(query.length-1) === ""){
+		while(query.charAt(query.length-1) === " "){
 			query = query.substring(0, query.length-1);
 		;
 		
