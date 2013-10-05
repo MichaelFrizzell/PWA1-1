@@ -15,7 +15,7 @@
 		};
 		while(query.charAt(query.length-1) === " "){
 			query = query.substring(0, query.length-1);
-		;
+    };
 		
 		/* Check search length, must have 3 characters*/
 		if(query.length < 3){
@@ -30,7 +30,7 @@
 	};
 	
 	/* Finds search matches*/
-	var search = function(query);
+	var search = function(query){
 		
 		/* split the user's search query string into an array*/
 		var queryArray = query.split(" ");
@@ -61,7 +61,7 @@
 		;
 		
 		results.sort();
-		
+
 		/* Check that matches were found, and run output functions*/
 		if(results.length = 0){
 			noMatch();
@@ -89,7 +89,7 @@
 		;
 		
 		/* loop through all the results search() function*/
-		for(var i=0, j=results.length; i<j; i++){
+		for(var i=0; i<results.length; i++){
 		
 			/* title of video ends with pipe
 			/* pull the title's string using index numbers*/
