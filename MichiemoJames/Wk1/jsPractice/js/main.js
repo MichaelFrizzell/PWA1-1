@@ -1,4 +1,3 @@
-// self-executing function
 (function(){
 
     /*******************************************
@@ -45,46 +44,67 @@
     console.log('------ Goal2: Assignment: JavaScript Practice ----------');
 
     console.log("1. avg of an array of numbers");
+
+
+
     var avgNumbers = function(arr){
 
-        //CODE GOES HERE
+
+      var total = 0;
+
+      arr.forEach(function(e){
+        total+=e;
+      });
+
+      avg = total / arr.length;
+
+      return avg;
+
     };
 
     console.log('avg number = ', avgNumbers([1,2,3,4,5]));
 
-    //--------------------------------------------------------
+    /*--------------------------------------------------------*/
     console.log("2. concat first and last name");
-
-        //PUT FUNCTION HERE
+      var fullName = function(firstName, lastName){
+        return firstName.concat(' '.concat(lastName));
+      };
 
     console.log(fullName('James', 'Bond'));
 
-    //--------------------------------------------------------
+    /*--------------------------------------------------------*/
     console.log("3. word count");
+
     var ipsum = "this is test text that is being used as input to a function"
 
-        //PUT FUNCTION HERE
+    var wordCount = function(words){
+      var spaceArray = words.split(" ");
+      return spaceArray.length + 1;
+    }
 
     console.log(wordCount(ipsum));
 
-    //--------------------------------------------------------
+    /*--------------------------------------------------------*/
     console.log("4. sentence char count");
 
-        //PUT FUNCTION HERE
+       var charCount = function(sentence){
+         var spaceArray = sentence.split(" ");
+         return ipsum.length - spaceArray.length;
+       }
 
     console.log(charCount(ipsum));
 
-    //--------------------------------------------------------
+    /*--------------------------------------------------------*/
     console.log("5. how many vowels in a word");
 
-        //PUT FUNCTION HERE
+        /*PUT FUNCTION HERE*/
 
     console.log(vowelsInWord('JavaScript'));
 
-    //--------------------------------------------------------
+    /*--------------------------------------------------------*/
     console.log("6. find number and create an array of even or odd numbers");
 
-        //PUT FUNCTION HERE
+        /*PUT FUNCTION HERE*/
 
     console.log(findNum([31,22,4,67,83,6,5,4]));
     console.log(findNum([31,22,4,67,83,6,5,4], false));
