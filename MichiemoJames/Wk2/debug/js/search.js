@@ -65,7 +65,7 @@
 		results.sort();
 
 		/* Check that matches were found, and run output functions*/
-		if(results.length = 0){
+		if(results.length === 0){
 			noMatch();
 		}else{
 			showMatches(results);
