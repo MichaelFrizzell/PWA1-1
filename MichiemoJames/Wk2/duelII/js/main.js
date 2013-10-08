@@ -4,31 +4,31 @@
 (function(){
 
   /* name players */
-  /*var playerOneName = "Ibuki", playerTwoName = "Blanka", playerOneHealth = 300, playerTwoHealth = 300, playerOneDamage = 50, playerTwoDamage = 50, round = 0;*/
+  /*var playerOne[0] = "Ibuki", playerTwo[0] = "Blanka", playerOne[1] = 300, playerTwo[1] = 300, playerOne[2] = 50, playerTwo[2] = 50, round = 0;*/
   var playerOne = ["Ibuki", 300, 50], playerTwo = ["Blanka", 300, 50], round = 0;
 
 
   /* use the alert function to advance rounds and display remaining health and round number*/
   function fight(){
-    alert(playerOneName + ":" + playerOneHealth + "  VS  " + playerTwoName + ":" + playerTwoHealth);
+    alert(playerOne[0] + ":" + playerOne[1] + "  VS  " + playerTwo[0] + ":" + playerTwo[1]);
     for (var i = 0; i < 10; i++)
     { 
       /* instantiate damage */
-      var minDmg1 = playerOneDamage * .5,
-          minDmg2 = playerTwoDamage * .5,
-          hit1 = Math.floor(Math.random()*(playerOneDamage-minDmg1)+minDmg1),
-          hit2 = Math.floor(Math.random()*(playerTwoDamage-minDmg2)+minDmg2);
+      var minDmg1 = playerOne[2] * .5,
+          minDmg2 = playerTwo[2] * .5,
+          hit1 = Math.floor(Math.random()*(playerOne[2]-minDmg1)+minDmg1),
+          hit2 = Math.floor(Math.random()*(playerTwo[2]-minDmg2)+minDmg2);
 
       /* execute damage */
-      playerOneHealth-=hit1;
-      playerTwoHealth-=hit2;
+      playerOne[1]-=hit1;
+      playerTwo[1]-=hit2;
 
       /* check for KO */
       var result = winnerCheck();
       if (result === "noKO")
       {
         round++;
-        alert(playerOneName + ":" + playerOneHealth + "     =====Round " + round + "! Fight!=====     " + playerTwoName + ":" + playerTwoHealth);
+        alert(playerOne[0] + ":" + playerOne[1] + "     =====Round " + round + "! Fight!=====     " + playerTwo[0] + ":" + playerTwo[1]);
       } else
       {
         alert(result);
@@ -39,15 +39,15 @@
 
   function winnerCheck(){
     var result = "noKO";
-    if (playerOneHealth < 1 && playerTwoHealth < 1)
+    if (playerOne[1] < 1 && playerTwo[1] < 1)
     {
       result = "Draw!";
-    } else if (playerOneHealth < 1)
+    } else if (playerOne[1] < 1)
     {
-      result = playerTwoName + " Wins!";
-    } else if (playerTwoHealth < 1)
+      result = playerTwo[0] + " Wins!";
+    } else if (playerTwo[1] < 1)
     {
-      result = playerOneName + " Wins!";
+      result = playerOne[0] + " Wins!";
     };
     return result;
   };
