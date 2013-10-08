@@ -8,9 +8,7 @@
   var playerOne = ["Ibuki", 300, 50], playerTwo = ["Blanka", 300, 50], round = 0;
 
 
-  /* use the alert function to advance rounds and display remaining health and round number*/
   function fight(){
-    alert(playerOne[0] + ":" + playerOne[1] + "  VS  " + playerTwo[0] + ":" + playerTwo[1]);
     for (var i = 0; i < 10; i++)
     { 
       /* instantiate damage */
@@ -28,10 +26,8 @@
       if (result === "noKO")
       {
         round++;
-        alert(playerOne[0] + ":" + playerOne[1] + "     =====Round " + round + "! Fight!=====     " + playerTwo[0] + ":" + playerTwo[1]);
       } else
       {
-        alert(result);
         break;
       };
     };
