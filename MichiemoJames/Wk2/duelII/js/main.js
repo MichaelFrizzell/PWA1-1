@@ -4,7 +4,8 @@
 (function(){
 
   /* name players */
-  var playerOneName = "Ibuki", playerTwoName = "Blanka", playerOneHealth = 300, playerTwoHealth = 300, playerOneDamage = 50, playerTwoDamage = 50, round = 0;
+  /*var playerOneName = "Ibuki", playerTwoName = "Blanka", playerOneHealth = 300, playerTwoHealth = 300, playerOneDamage = 50, playerTwoDamage = 50, round = 0;*/
+
 
   /* use the alert function to advance rounds and display remaining health and round number*/
   function fight(){
