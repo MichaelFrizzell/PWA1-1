@@ -1,4 +1,4 @@
-/* James Michiemo, 07OCT2013, The Duel-Part II*/
+/* James Michiemo, 08OCT2013, The Duel-Part III*/
 
 /* self execution */
 (function(){
