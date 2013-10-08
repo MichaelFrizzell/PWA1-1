@@ -5,6 +5,7 @@
 
   /* name players */
   /*var playerOneName = "Ibuki", playerTwoName = "Blanka", playerOneHealth = 300, playerTwoHealth = 300, playerOneDamage = 50, playerTwoDamage = 50, round = 0;*/
+  var playerOne = ["Ibuki", 300, 50], playerTwo = ["Blanka", 300, 50], round = 0;
 
 
   /* use the alert function to advance rounds and display remaining health and round number*/
