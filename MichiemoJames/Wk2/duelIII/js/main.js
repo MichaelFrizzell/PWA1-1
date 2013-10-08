@@ -5,10 +5,23 @@
 
   /* name players */
   /*var playerOne[0] = "Ibuki", playerTwo[0] = "Blanka", playerOne[1] = 300, playerTwo[1] = 300, playerOne[2] = 50, playerTwo[2] = 50, round = 0;*/
-  var playerOne = ["Ibuki", 300, 50], playerTwo = ["Blanka", 300, 50], round = 0;
-
+  /*var playerOne = ["Ibuki", 300, 50], playerTwo = ["Blanka", 300, 50], round = 0;*/
+  var fighters = [
+    playerOne = {
+      name: "Ibuki",
+      damage:300,
+      health:50
+    },
+    playerTwo = {
+      name: "Blanka",
+      damage:300,
+      health:50
+    }
+  ],
+    round = 0;
 
   function fight(){
+    
     for (var i = 0; i < 10; i++)
     { 
       /* instantiate damage */
