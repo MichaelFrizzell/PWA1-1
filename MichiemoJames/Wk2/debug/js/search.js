@@ -59,8 +59,8 @@
 				if(compare > -1){
 					results.push(db[i]);
 				};
-      };
-    };
+            };
+        };
 
 		results.sort();
 
@@ -103,7 +103,7 @@
 
 			/* make the video link - THE NEXT LINE IS CORRECT.*/
 			html += '<p><a href=' + url + '>' + title + '</a></p>';
-		};
+		}
 		resultsDIV.innerHTML = html; //THIS LINE IS CORRECT.
 	};
 
