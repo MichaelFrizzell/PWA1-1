@@ -20,8 +20,8 @@
  console.log("Output element: ", output);
 
  function button_click(event) {
-   if(query != "" && query > 0 && query < 11 && gameOver === false){
    query = document.getElementById("input").value;
+   if(query != "" && query > 0 && query < 11 && gameOver === false){
    var numEval = function(){
      if(query === random){
        console.log("correct");
@@ -53,6 +53,12 @@
     guessButton.removeEventListener('click', button_click, false); // Deactivate the button by removing the event listener when the game is over.
    } // validate
  }
+
+ window.addEventListener('keyup', function(e){
+   if(e.keyCode === 13){
+     button_click();
+   }
+ }, false); // Use a keyboard event for the ENTER button that also acts like clicking on the guess button.
 
  guessButton.addEventListener('click', button_click, false); // Create an .addEventListner event listener on the guess button to listen for a click event.
 
