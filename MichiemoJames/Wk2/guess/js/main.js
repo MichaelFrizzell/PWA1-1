@@ -13,7 +13,8 @@
      query = document.getElementById("input").value, 
      result = document.getElementById("output"), //Create variables that reference the DOM(html) elements.
      guessButton = document.querySelector('button'),
-     gameOver = false;
+     gameOver = false
+     counter = 3; // Tally all the wrong guesses and end the game after the 3rd incorrect guess and show appropriate game over message in the HTML.
  console.log("Random number: ", random);
  console.log("Input element: ", query);
  console.log("Output element: ", output);
@@ -26,20 +27,34 @@
        console.log("correct");
        output.innerHTML = "You guessed the correct number.";
        gameOver = true;
-     }else if(query > random){
-       console.log("lower");
-       output.innerHTML = "The number you selected is too high. Try again.";
-     }else if(query < random){
-       console.log("higher");
+     }else if(query > random && counter == 1){
+       console.log("lower", counter);
+       output.innerHTML = "Too high. Last try.";
+       counter--;
+     }else if(query != random && counter == 0){
+       output.innerHTML = "Game Over";
+       gameOver = true;
+     }else if(query < random && counter == 1){
+       console.log("higher", counter);
+       output.innerHTML = "Too low. Last go.";
+       counter--;
+     }else if(query > random && counter != 0){
+       console.log("lower", counter);
+       output.innerHTML = "The number you selected is too high. Try again. You have " + counter + " tries left.";
+       counter--;
+     }else if(query < random && counter != 0){
+       console.log("higher", counter);
        output.innerHTML = "The number you selected is too low. Try again.";
+       counter--;
      } 
    }(); // When the guess button is clicked, evaluate your guess with the number the computer has chosen.
    }else if(gameOver === true){
-    output.innerHTML = "Refesh your web browser to play again."
+    output.innerHTML = "Refesh your web browser to play again.";
+    guessButton.removeEventListener('click', button_click, false); // Deactivate the button by removing the event listener when the game is over.
    } // validate
  }
 
- guessButton.addEventListener('click', button_click, false); // Create an .addEventListner event listener on the guess button to listen for a click event. 
+ guessButton.addEventListener('click', button_click, false); // Create an .addEventListner event listener on the guess button to listen for a click event.
 
 })(); 
 
