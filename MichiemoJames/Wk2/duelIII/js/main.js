@@ -18,15 +18,15 @@
       damage:50
     }
   ],
-    round = 0;
+    round = 0,
+    playerOneHP = document.querySelector('#kabal p'),
+    playerTwoHP = document.querySelector('#kratos p')
+    commandText = document.querySelector('#round');
 
-
-  var playerOneHP = document.querySelector('#kabal p');
-
-  var playerTwoHP = document.querySelector('#kratos p');
 
   playerOneHP.innerHTML = fighters[0].health;
   playerTwoHP.innerHTML = fighters[1].health;
+  commandText.innerHTML = "Click To Start Fight " + round;
 
   function fight(){
     console.log(fighters[0].name + ":" + fighters[0].health + "  VS  " + fighters[1].name + ":" + fighters[1].health);
