@@ -21,6 +21,13 @@
 
  function button_click(event) {
    query = document.getElementById("input").value;
+   
+   if(isNaN(query)){
+     output.innerHTML = "Please enter a number.";
+   }
+
+
+
    if(query != "" && query > 0 && query < 11 && gameOver === false){
    var numEval = function(){
      if(query === random){
