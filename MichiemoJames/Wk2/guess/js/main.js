@@ -13,7 +13,7 @@
      query = document.getElementById("input").value, 
      result = document.getElementById("output"), //Create variables that reference the DOM(html) elements.
      guessButton = document.querySelector('button'),
-     gameOver = false
+     gameOver = false;
      counter = 3; // Tally all the wrong guesses and end the game after the 3rd incorrect guess and show appropriate game over message in the HTML.
  console.log("Random number: ", random);
  console.log("Input element: ", query);
@@ -40,12 +40,12 @@
        counter--;
      }else if(query > random && counter != 0){
        console.log("lower", counter);
-       output.innerHTML = "The number you selected is too high. Try again. You have " + counter + " tries left.";
        counter--;
+       output.innerHTML = "The number you selected is too high. Try again. You have " + counter + " tries left.";
      }else if(query < random && counter != 0){
        console.log("higher", counter);
-       output.innerHTML = "The number you selected is too low. Try again.";
        counter--;
+       output.innerHTML = "The number you selected is too low. Try again. You have " + counter + " tries left.";
      } 
    }(); // When the guess button is clicked, evaluate your guess with the number the computer has chosen.
    }else if(gameOver === true){
