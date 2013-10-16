@@ -9,12 +9,13 @@
 
 //Game variables
 (function (){
- var random = String(~~(Math.random() * 10 + 1)), //Create a variable to store a random integer within the range 1-10.
-     query = document.getElementById("input").value, 
+ var random = ~~(Math.random() * 10 + 1), //Create a variable to store a random integer within the range 1-10.
+     query = document.getElementById("input").value,
      result = document.getElementById("output"), //Create variables that reference the DOM(html) elements.
      guessButton = document.querySelector('button'),
      gameOver = false;
      counter = 3; // Tally all the wrong guesses and end the game after the 3rd incorrect guess and show appropriate game over message in the HTML.
+
  console.log("Random number: ", random);
  console.log("Input element: ", query);
  console.log("Output element: ", output);
@@ -29,27 +30,30 @@
 
 
    if(query != "" && query > 0 && query < 11 && gameOver === false){
+       console.log(query);
+       console.log(random);
+       console.log("is query less than random??",  query<random);
    var numEval = function(){
      if(query === random){
        console.log("correct");
        output.innerHTML = "You guessed the correct number.";
        gameOver = true;
-     }else if(query > random && counter == 1){
+     }else if(query > random && counter == 2){
        console.log("lower", counter);
        output.innerHTML = "Too high. Last try.";
        counter--;
-     }else if(query != random && counter == 0){
+     }else if(query != random && counter == 1){
        output.innerHTML = "Game Over";
        gameOver = true;
-     }else if(query < random && counter == 1){
+     }else if(query < random && counter == 2){
        console.log("higher", counter);
        output.innerHTML = "Too low. Last go.";
        counter--;
-     }else if(query > random && counter != 0){
+     }else if(query > random){
        console.log("lower", counter);
        counter--;
        output.innerHTML = "The number you selected is too high. Try again. You have " + counter + " tries left.";
-     }else if(query < random && counter != 0){
+     }else if(query < random){
        console.log("higher", counter);
        counter--;
        output.innerHTML = "The number you selected is too low. Try again. You have " + counter + " tries left.";
