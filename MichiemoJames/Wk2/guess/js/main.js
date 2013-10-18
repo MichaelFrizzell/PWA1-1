@@ -38,14 +38,14 @@
        console.log("correct");
        output.innerHTML = "You guessed the correct number.";
        gameOver = true;
-     }else if(query > random && counter == 2){
+     }else if(query > random && counter == 1){
        console.log("lower", counter);
        output.innerHTML = "Too high. Last try.";
        counter--;
-     }else if(query != random && counter == 1){
+     }else if(query != random && counter == 0){
        output.innerHTML = "Game Over";
        gameOver = true;
-     }else if(query < random && counter == 2){
+     }else if(query < random && counter == 1){
        console.log("higher", counter);
        output.innerHTML = "Too low. Last go.";
        counter--;
