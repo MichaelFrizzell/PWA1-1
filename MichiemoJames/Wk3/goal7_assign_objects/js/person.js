@@ -19,6 +19,9 @@
 
   Person.prototype.update=function(){
     console.log("trigger");
+    this.action=Person.actions[~~(Math.random()*Person.actions.length)];
+    var write=document.getElementById("r"+this.row+"c3");
+    write.innerHTML=this.action;
   };
 
 

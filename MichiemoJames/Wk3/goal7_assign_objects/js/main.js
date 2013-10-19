@@ -27,7 +27,7 @@
     entry.innerHTML = info;
   }; // create a function to populate dom
 
-  interval = setInterval(runUpdate,1000/30);
+  interval = setInterval(runUpdate,5000/1);
 
   
   function runUpdate(){
