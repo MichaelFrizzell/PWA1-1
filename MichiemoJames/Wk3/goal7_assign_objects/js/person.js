@@ -14,4 +14,7 @@
 
   window.Person = Person;
 
+  Person.jobs=["Lawyer","Director","Psychologist","Forensics","Manager"];
+  Person.actions=["study","sleep","eat"];
+
 })();
