@@ -22,10 +22,6 @@
 
   }; // three instances
 
-  Person.prototype.update = function(){
-    console.log("trigger prototype function");
-  };
-
   function populateHTML(info,block){
     var entry = document.getElementById(block);
     entry.innerHTML = info;

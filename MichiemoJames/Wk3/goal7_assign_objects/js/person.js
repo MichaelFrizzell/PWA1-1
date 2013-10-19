@@ -17,6 +17,10 @@
     write.innerHTML=this.action;
   };
 
+  Person.prototype.update=function(){
+    console.log("trigger");
+  };
+
 
   window.Person = Person;
 
