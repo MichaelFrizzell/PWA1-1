@@ -11,12 +11,6 @@
   var names = ['Jeff','Abed','Britta','Annie','Shirley'],
       people = []; // 5 name array
 
-  function Person(name){
-    this.name = name;
-    this.job = "";
-  };
-
-
   for(var i=0;i<3;i++){
     var index = ~~(Math.random()*names.length);
     var person = new Person(names[index],i+1);
