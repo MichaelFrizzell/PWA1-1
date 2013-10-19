@@ -6,5 +6,11 @@
  * Date: 19OCT2013
  */
 
+(function(){
 
+  var names = ['Jeff','Abed','Britta','Annie','Shirley'];
+
+
+
+})();
 
