@@ -7,10 +7,16 @@
  */
 
 (function(){
-  var Person = function(name){
+  var Person = function(name,row){
     this.name=name;
-    this.job="";
+    this.action=Person.actions[~~(Math.random()*Person.actions.length)];
+    this.job=Person.jobs[~~(Math.random()*Person.jobs.length)];
+    this.row=row;
+
+    var write = document.getElementById("r"+this.row+"c3");
+    write.innerHTML=this.action;
   };
+
 
   window.Person = Person;
 

@@ -26,8 +26,6 @@
     console.log("trigger prototype function");
   };
 
-  console.log("array"+Person);
-
   function populateHTML(info,block){
     var entry = document.getElementById(block);
     entry.innerHTML = info;
