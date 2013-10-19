@@ -9,7 +9,7 @@
 (function(){
 
   var names = ['Jeff','Abed','Britta','Annie','Shirley'],
-      people = [];
+      people = []; // 5 name array
 
 
   for(var i=0;i<3;i++){
@@ -17,7 +17,11 @@
     var person = new Person(names[index],i+1);
     people.push(person);
     console.log(people);
-  }
+  }; // three instances
+
+
+
+
 
 
 
