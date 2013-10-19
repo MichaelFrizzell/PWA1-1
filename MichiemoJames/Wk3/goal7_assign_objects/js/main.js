@@ -21,10 +21,13 @@
     var index = ~~(Math.random()*names.length);
     var person = new Person(names[index],i+1);
     people.push(person);
+
     console.log(people);
 
     populateHTML(person.name, "r"+(i+1)+"c1");
     populateHTML(person.job, "r"+(i+1)+"c2");
+    names.splice(index,1); // no repeat
+
   }; // three instances
 
   function populateHTML(info,block){
