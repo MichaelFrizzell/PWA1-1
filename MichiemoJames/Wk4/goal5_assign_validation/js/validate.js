@@ -31,21 +31,24 @@
     var validateField = function(inputName){
 
         if (inputName.name === 'f_username'){
-            var pattern = /^
+            var pattern = /^[A-Z]+(([\'\,\.\- ][A-Z])?[a-zA-Z]*)*$/;
 
             //You will need to create an else-if statement for each input field id.  The
             //      format will be similar to the above IF statement.
 
 
         }else if (inputName.name === 'f_email'){
+          var pattern = /^[a-zA-Z]+[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
         }else if (inputName.name === 'f_phone'){
+          var pattern = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/
         }else if (inputName.name === 'f_ssn'){
+          var pattern = /^(\d{3}-?\d{2}-?\d{4}|XXX-XX-XXXX)$/;
         }else if (inputName.name === 'f_password'){
+          var pattern = /^[A-Za-z]\w{3,14}$/;
         };
           
 
-
-        var pass = 'the RegEx .test statement is needed here';
+        var pass = pattern.test(inputName.value);
         var errorMsg = inputName.nextSibling.nextSibling.nextSibling.nextSibling;
 
         if (!pass || inputName.value.length < 2){
