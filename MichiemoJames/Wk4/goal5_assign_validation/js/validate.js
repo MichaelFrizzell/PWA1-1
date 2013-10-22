@@ -31,16 +31,16 @@
     var validateField = function(inputName){
 
         if (inputName.name === 'f_username'){
-            var pattern = /^[A-Z]+(([\'\,\.\- ][A-Z])?[a-zA-Z]*)*$/;
+          var pattern = /^[A-Z]+(([\'\,\.\- ][A-Z])?[a-zA-Z]*)*$/;
 
             //You will need to create an else-if statement for each input field id.  The
             //      format will be similar to the above IF statement.
 
 
         }else if (inputName.name === 'f_email'){
-          var pattern = /^[a-zA-Z]+[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+          var pattern = /^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$/
         }else if (inputName.name === 'f_phone'){
-          var pattern = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/
+          var pattern = /^[\\(]{0,1}([0-9]){3}[\\)]{0,1}[ ]?([^0-1]){1}([0-9]){2}[ ]?[-]?[ ]?([0-9]){4}[ ]*((x){0,1}([0-9]){1,5}){0,1}$/
         }else if (inputName.name === 'f_ssn'){
           var pattern = /^(\d{3}-?\d{2}-?\d{4}|XXX-XX-XXXX)$/;
         }else if (inputName.name === 'f_password'){
