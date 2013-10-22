@@ -1,6 +1,7 @@
 /*
      Developed by the JavaScript team at Fullsail
      Date: 1306
+     Name: James Michiemo
 */
 
 (function(){
