@@ -8,7 +8,7 @@
 
 (function(){
 
-  var names = ['Jeff','Abed','Britta','Annie','Shirley'],
+  var names = ['Jeff','Abed','Chang','Britta','Annie','Shirley'],
       people = []; // 5 name array
 
   for(var i=0;i<3;i++){
