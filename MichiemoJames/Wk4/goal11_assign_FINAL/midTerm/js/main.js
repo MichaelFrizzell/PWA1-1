@@ -13,6 +13,11 @@
   var first = new Student('James','3098 Whisper Lane','Orlando','Florida',[4.0,3.1,3.7], new Date()),
       second = new Student('John','606 Saint Rd','Dallas','Texas',[4.0,3.1,3.7], new Date());
 
+  // populate array with 2 objects of information
+  students = [first,second];
+
+
+
 /*var studentDate = new Date();
 var students = [{
   name: "James",
