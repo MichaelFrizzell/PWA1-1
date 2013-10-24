@@ -46,6 +46,7 @@ for(var i = 0; i<students.length; i++){
   console.log("Name: " + students[i].name);
   console.log("Address: " + students[i].address.street + " " + students[i].address.city + ", " + students[i].address.state);
   console.log("GPA: " + students[i].gpa);
+  console.log("Date: " + students[i].date);
 };
 var name = document.querySelector("#name"),
     address = document.querySelector("#address"),
