@@ -4,6 +4,12 @@
   * October 12, 2013 
 */
 
+(function(){
+  
+  // create an empty students array
+  var students = [];
+
+
 // create an array of at least 2 student objects
 var studentDate = new Date();
 var students = [{
@@ -80,4 +86,4 @@ addStudent("Naomi", "808 Aloma Ln", "Winter Park", "FL", [2.9,3.9,3.8], "8OCT201
 //infoDisplay();
 
 button.addEventListener("click", infoDisplay, false);
-
+})();
