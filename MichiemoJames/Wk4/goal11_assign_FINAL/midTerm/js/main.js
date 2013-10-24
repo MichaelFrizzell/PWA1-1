@@ -9,9 +9,11 @@
   // create an empty students array
   var students = [];
 
+  // replace the student objects with constructor calls
+  var first = new Student('James','3098 Whisper Lane','Orlando','Florida',[4.0,3.1,3.7], new Date()),
+      second = new Student('John','606 Saint Rd','Dallas','Texas',[4.0,3.1,3.7], new Date());
 
-// create an array of at least 2 student objects
-var studentDate = new Date();
+/*var studentDate = new Date();
 var students = [{
   name: "James",
   address: {
@@ -28,8 +30,8 @@ var students = [{
     state: "Texas"},
   gpa: [4.0,3.1,3.7],
   date: studentDate
-}],
-  button = document.querySelector(".buttonred"),
+}],*/
+var button = document.querySelector(".buttonred"),
   displayIndex = 0;
 
 function infoDisplay(){
