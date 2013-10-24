@@ -40,6 +40,9 @@ var button = document.querySelector(".buttonred"),
   displayIndex = 0;
 
 function infoDisplay(){
+// calculate average before everything is displayed
+createAvg();
+
 // display all information in console.log
 console.log("***** Below shows original object *****");
 for(var i = 0; i<students.length; i++){
@@ -100,4 +103,12 @@ students.push(third);
 //infoDisplay();
 
 button.addEventListener("click", infoDisplay, false);
+
+function createAvg(){
+  students.forEach(function(e){
+    e.avggpa();
+  });
+};
+createAvg();
+
 })();

@@ -10,7 +10,9 @@ var Student = function(name,street,city,state,gpa,date){
 // globalize constructor
 window.Student = Student;
 
-Student.prototype.avg = function(){
+
+// calculate average
+Student.prototype.avggpa = function(){
   var gpaTotal = this.gpa[0] + this.gpa[1] + this.gpa[2];
   var gpaavg = gpaTotal/3;
   this.avg = gpaavg.toFixed(2);
