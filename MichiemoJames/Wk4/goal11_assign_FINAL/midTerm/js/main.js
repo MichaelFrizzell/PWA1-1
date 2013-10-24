@@ -1,7 +1,7 @@
 /*
-	* Mid Terms for PWA-1
+	* Final for PWA-1
   * James Michiemo
-  * October 12, 2013 
+  * October 24, 2013 
 */
 
 (function(){
@@ -16,26 +16,6 @@
   // populate array with 2 objects of information
   students = [first,second];
 
-
-
-/*var studentDate = new Date();
-var students = [{
-  name: "James",
-  address: {
-    street: "3098 Whisper Lane",
-    city: "Orlando",
-    state: "Florida"},
-  gpa: [4.0,3.1,3.7],
-  date: studentDate
-},{
-  name: "John",
-  address: {
-    street: "606 Saint Rd",
-    city: "Dallas",
-    state: "Texas"},
-  gpa: [4.0,3.1,3.7],
-  date: studentDate
-}],*/
 var button = document.querySelector(".buttonred"),
   displayIndex = 0;
 
@@ -65,14 +45,10 @@ address.innerHTML = "Address: " + students[displayIndex].address;
 gpa.innerHTML = "GPA: " + students[displayIndex].gpa,
 date.innerHTML = "Date: " + students[displayIndex].date;
 avg.innerHTML = "Average GPA: " + students[displayIndex].avg;
-
 displayIndex+=1;
-console.log(displayIndex);
-}else if(displayIndex>=students.length){
-    button.removeEventListener('click', infoDisplay, false);
+}else{
     button.innerHTML = "Done!";
-    console.log(displayIndex);
-
+    button.removeEventListener('click', infoDisplay, false);
 }
 
 };
@@ -81,26 +57,8 @@ infoDisplay();
 
 // Add new object to array above
 
-/*function addStudent(n,str,c,sta,g,d){
-  var student = {
-    name: n,
-    address: {
-      street: str,
-      city: c,
-      state: sta},
-    gpa: g,
-    date: d
-  }
-  students.push(student);
-}*/
-
-/*// add new student
-addStudent("Naomi", "808 Aloma Ln", "Winter Park", "FL", [2.9,3.9,3.8], "8OCT2013");*/
-
 var third = new Student('Naomi', '808 Aloma Ln', 'Winter Park', 'FL', [2.9,3.9,3.8], new Date());
 students.push(third);
-
-//infoDisplay();
 
 button.addEventListener("click", infoDisplay, false);
 
