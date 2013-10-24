@@ -44,7 +44,7 @@ function infoDisplay(){
 console.log("***** Below shows original object *****");
 for(var i = 0; i<students.length; i++){
   console.log("Name: " + students[i].name);
-  console.log("Address: " + students[i].address.street + " " + students[i].address.city + ", " + students[i].address.state);
+  console.log("Address: " + students[i].address);
   console.log("GPA: " + students[i].gpa);
   console.log("Date: " + students[i].date);
 };
@@ -56,7 +56,7 @@ var name = document.querySelector("#name"),
 
 if(displayIndex<students.length){
 name.innerHTML = "Name: " + students[displayIndex].name;
-address.innerHTML = "Address: " + students[displayIndex].address.street + " " + students[displayIndex].address.city + ", " + students[displayIndex].address.state;
+address.innerHTML = "Address: " + students[displayIndex].address;
 gpa.innerHTML = "GPA: " + students[displayIndex].gpa,
 date.innerHTML = "Date: " + students[displayIndex].date;
 
