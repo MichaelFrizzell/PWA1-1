@@ -12,7 +12,7 @@ window.Student = Student;
 
 Student.prototype.avg = function(){
   var gpaTotal = this.gpa[0] + this.gpa[1] + this.gpa[2];
-  var avg = gpaTotal/3;
-  this.avg = avg.toFixed(2);
+  var gpaavg = gpaTotal/3;
+  this.avg = gpaavg.toFixed(2);
 };
   

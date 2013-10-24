@@ -47,11 +47,13 @@ for(var i = 0; i<students.length; i++){
   console.log("Address: " + students[i].address);
   console.log("GPA: " + students[i].gpa);
   console.log("Date: " + students[i].date);
+  console.log("Average: " + students[i].avg);
 };
 var name = document.querySelector("#name"),
     address = document.querySelector("#address"),
-    gpa = document.querySelector("#gpa")
-    date = document.querySelector("#date");
+    gpa = document.querySelector("#gpa"),
+    date = document.querySelector("#date"),
+    avg = document.querySelector('#gpaavg');
 
 
 if(displayIndex<students.length){
@@ -59,6 +61,7 @@ name.innerHTML = "Name: " + students[displayIndex].name;
 address.innerHTML = "Address: " + students[displayIndex].address;
 gpa.innerHTML = "GPA: " + students[displayIndex].gpa,
 date.innerHTML = "Date: " + students[displayIndex].date;
+avg.innerHTML = "Average GPA: " + students[displayIndex].avg;
 
 displayIndex+=1;
 console.log(displayIndex);
@@ -75,7 +78,7 @@ console.log(displayIndex);
 
 // Add new object to array above
 
-function addStudent(n,str,c,sta,g,d){
+/*function addStudent(n,str,c,sta,g,d){
   var student = {
     name: n,
     address: {
@@ -86,10 +89,13 @@ function addStudent(n,str,c,sta,g,d){
     date: d
   }
   students.push(student);
-}
+}*/
 
-// add new student
-addStudent("Naomi", "808 Aloma Ln", "Winter Park", "FL", [2.9,3.9,3.8], "8OCT2013");
+/*// add new student
+addStudent("Naomi", "808 Aloma Ln", "Winter Park", "FL", [2.9,3.9,3.8], "8OCT2013");*/
+
+var third = new Student('Naomi', '808 Aloma Ln', 'Winter Park', 'FL', [2.9,3.9,3.8], new Date());
+students.push(third);
 
 //infoDisplay();
 
