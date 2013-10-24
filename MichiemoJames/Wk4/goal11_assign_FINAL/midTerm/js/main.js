@@ -77,7 +77,7 @@ console.log(displayIndex);
 
 };
 
-//infoDisplay();
+infoDisplay();
 
 // Add new object to array above
 
